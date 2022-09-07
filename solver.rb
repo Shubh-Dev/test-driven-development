@@ -1,10 +1,10 @@
 class Solver
   def factorial(num)
-    if num.zero?
-      1
-    else
-      num * factorial(num - 1)
-    end
+    raise RangeError, "You can't put negative value as argument when calling factorial method" if num.negative?
+
+    return 1 if num.zero? || num == 1
+
+    num * factorial(num - 1)
   end
 
   def reverse(word)
