@@ -1,29 +1,29 @@
-class Solver 
-    def factorial(num)
-        if num == 0
-            return 1
-        else
-            return num * factorial(num-1)
-        end
+class Solver
+  def factorial(num)
+    if num.zero?
+      1
+    else
+      num * factorial(num - 1)
     end
+  end
 
-    def reverse(word)
-        if word.length == 1
-            return word
-        else
-            return word[-1] + reverse(word[0..-2])
-        end
+  def reverse(word)
+    if word.length == 1
+      word
+    else
+      word[-1] + reverse(word[0..-2])
     end
+  end
 
-    def fizzbuzz(num)
-        if num % 3 == 0 && num % 5 == 0
-            return "FizzBuzz"
-        elsif num % 3 == 0
-            return "Fizz"
-        elsif num % 5 == 0
-            return "Buzz"
-        else
-            return num.to_s
-        end
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'FizzBuzz'
+    elsif (num % 3).zero?
+      'Fizz'
+    elsif (num % 5).zero?
+      'Buzz'
+    else
+      num.to_s
     end
+  end
 end
