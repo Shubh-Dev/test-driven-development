@@ -45,3 +45,26 @@ describe Solver do
         expect(solver.reverse("bruk")).to eq("kurb")
     end
 end
+
+describe Solver do
+    it "should return 'FizzBuzz' when given 15" do
+        solver = Solver.new
+        expect(solver.fizzbuzz(15)).to eq("FizzBuzz")
+    end
+    it "should return 'Fizz' when given 3" do
+        solver = Solver.new
+        expect(solver.fizzbuzz(3)).to eq("Fizz")
+    end
+    it "should return 'Buzz' when given 5" do
+        solver = Solver.new
+        expect(solver.fizzbuzz(5)).to eq("Buzz")
+    end
+    it "should return '1' when given 1" do
+        solver = Solver.new
+        expect(solver.fizzbuzz(1)).to eq("1")
+    end
+    it "should return '2' when given 2" do
+        solver = Solver.new
+        expect(solver.fizzbuzz(2)).to eq("2")
+    end
+end
