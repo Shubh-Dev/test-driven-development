@@ -21,6 +21,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.factorial(4)).to eq(24)
   end
+  it 'should return 24 when given 5' do
+    solver = Solver.new
+    expect(solver.factorial(5)).to eq(120)
+  end
 end
 
 describe Solver do
@@ -44,6 +48,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.reverse('bruk')).to eq('kurb')
   end
+  it "should return 'dne' when given 'end'" do
+    solver = Solver.new
+    expect(solver.reverse('end')).to eq('dne')
+  end
 end
 
 describe Solver do
@@ -66,5 +74,13 @@ describe Solver do
   it "should return '2' when given 2" do
     solver = Solver.new
     expect(solver.fizzbuzz(2)).to eq('2')
+  end
+  it "should return 'FizzBuzz' when given 45" do
+    solver = Solver.new
+    expect(solver.fizzbuzz(45)).to eq('FizzBuzz')
+  end
+  it "should return 'Buzz' when given 10" do
+    solver = Solver.new
+    expect(solver.fizzbuzz(10)).to eq('Buzz')
   end
 end
