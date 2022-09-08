@@ -25,6 +25,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.factorial(5)).to eq(120)
   end
+  it 'should return 720 when given 6' do
+    solver = Solver.new
+    expect(solver.factorial(6)).to eq(720)
+  end
 end
 
 describe Solver do
@@ -52,12 +56,20 @@ describe Solver do
     solver = Solver.new
     expect(solver.reverse('end')).to eq('dne')
   end
+  it "should return 'pat' when given 'tap'" do
+    solver = Solver.new
+    expect(solver.reverse('tap')).to eq('pat')
+  end
 end
 
 describe Solver do
   it "should return 'FizzBuzz' when given 15" do
     solver = Solver.new
     expect(solver.fizzbuzz(15)).to eq('FizzBuzz')
+  end
+  it "should return 'Fizz' when given 9" do
+    solver = Solver.new
+    expect(solver.fizzbuzz(9)).to eq('Fizz')
   end
   it "should return 'Fizz' when given 3" do
     solver = Solver.new
